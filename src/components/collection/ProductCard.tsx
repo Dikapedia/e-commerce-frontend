@@ -1,5 +1,5 @@
 import { ArrowRight, ChevronRight } from 'lucide-react';
-import type { Product } from '../types/product';
+import type { Product } from '../../types/product';
 
 interface ProductCardProps {
   product: Product;

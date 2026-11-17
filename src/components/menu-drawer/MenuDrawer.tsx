@@ -1,11 +1,11 @@
 import { X } from 'lucide-react';
+import { MenuNav } from './MenuNav';
+import { ConciergeInfo } from './ConciergeInfo';
 
 interface MenuDrawerProps {
   open: boolean;
   onClose: () => void;
 }
-
-const NAV_ITEMS = ['Collection', 'Craftsmanship', 'Heritage', 'Ateliers', 'Contact'];
 
 export function MenuDrawer({ open, onClose }: MenuDrawerProps) {
   if (!open) return null;
@@ -22,25 +22,10 @@ export function MenuDrawer({ open, onClose }: MenuDrawerProps) {
             </button>
           </div>
 
-          <nav className="mt-8 space-y-6">
-            {NAV_ITEMS.map(item => (
-              <a
-                key={item}
-                href={`#${item.toLowerCase()}`}
-                onClick={onClose}
-                className="block font-['Cormorant_Garamond',serif] text-3xl text-slate-200 hover:text-white transition-colors"
-              >
-                {item}
-              </a>
-            ))}
-          </nav>
+          <MenuNav onNavigate={onClose} />
         </div>
 
-        <div className="pt-8 border-t border-white/10">
-          <p className="text-xs text-slate-400 uppercase tracking-widest mb-2">Private Concierge</p>
-          <p className="text-sm font-mono text-slate-200">+62 345678</p>
-          <p className="text-xs text-slate-400 mt-1">concierge@timeless.com</p>
-        </div>
+        <ConciergeInfo />
       </div>
     </div>
   );
