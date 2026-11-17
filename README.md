@@ -36,7 +36,7 @@ Project ini dibuat hanya untuk bersenang-senang. Tidak ada paksaan, tidak ada te
 1. Clone repository lalu masuk ke foldernya.
 
    ```bash
-   git clone https://github.com/Dikapedia/catalog-landingpage.git
+   git clone https://github.com/Dikapedia/e-commerce-frontend.git
    cd catalog-landingpage
    ```
 
